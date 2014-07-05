@@ -5,13 +5,13 @@ from random import random, gauss
 from PIL import Image
 from numpy import int32
 
-# PROGRAM CONSTANTS
 
+# PROGRAM CONSTANTS
 # rgb(103, 105, 128)
 BLACK_VALUE = int32(-10000000)
 # rgb(164, 114, 128)
 WHITE_VALUE = int32((255 << 24) + (230 << 16) + (230 << 8) + 230)
-BRIGHTNESS_VALUE = 30  # 255 << 24) + (32<< 16) + (32 << 8) + 32
+BRIGHTNESS_VALUE = int32(30)
 
 
 # PIXEL CONVERSION FUNCTIONS
