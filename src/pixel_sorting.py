@@ -173,4 +173,4 @@ def sort_image(image, row_or_col, mode=0, prob=1, avg_band_size=1):
     return(Image.fromstring('RGB', (x_size, y_size), bytes(new_image)))
 
 
-__all__ = ["Image", "sort_image"]
+__all__ = ["sort_image"]
