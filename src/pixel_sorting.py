@@ -1,9 +1,11 @@
+#!/usr/bin/python3
 """transliteration of Kim Asendorf's pixel sorting script"""
 
 from copy import copy
 from random import random, gauss
 from PIL import Image
 from numpy import int32
+from argparse import ArgumentParser
 
 
 # PROGRAM CONSTANTS
@@ -174,3 +176,13 @@ def sort_image(image, row_or_col, mode=0, prob=1, avg_band_size=1):
 
 
 __all__ = ["sort_image"]
+
+
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("-i", dest="input_image_file", required=True, type=str, help="input")
+    parser.add_argument("-o", dest="output_image_file", required=True, type=str, help="output")
+    args = parser.parse_args()
+
+    image = Image.open(args.input_image_file)
+    sort_image(image, 0).save(args.output_image_file)
